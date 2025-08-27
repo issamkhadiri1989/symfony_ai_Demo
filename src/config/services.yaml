@@ -1,0 +1,12 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+
+    Symfony\AI\Agent\Toolbox\Tool\SerpApi:
+        $apiKey: '%env(SERP_API_KEY)%'
